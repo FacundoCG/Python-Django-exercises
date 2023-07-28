@@ -1,0 +1,9 @@
+setup.py
+Calculos/__init__.py
+Calculos/cgenerales.py
+Calculos/Potenciac/__init__.py
+Calculos/Potenciac/potencia.py
+paquetepotencia.egg-info/PKG-INFO
+paquetepotencia.egg-info/SOURCES.txt
+paquetepotencia.egg-info/dependency_links.txt
+paquetepotencia.egg-info/top_level.txt
