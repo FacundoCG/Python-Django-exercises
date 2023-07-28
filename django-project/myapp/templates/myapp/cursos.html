@@ -1,0 +1,25 @@
+{% extends "myapp/header.html" %}
+{% load static %}
+{% block title %} Cursos {% endblock %}
+{% block content %}
+    <div class="container-fluid mt-3 mb-4">
+        <table class="table table-dark table-hover">
+            <thead><tr>
+            <th>Curso</th> 
+            <th>Inscriptos</th>
+            </tr></thead> 
+            {% for nombre, inscriptos in cursos %}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{inscriptos}}</td>
+            </tr>
+            {% endfor %}
+    
+        </table>
+
+        {% lorem 3 p %}
+        {% lorem 20 w random %}
+        {% now "D M Y H T" %}
+    </div>
+
+{% endblock %}

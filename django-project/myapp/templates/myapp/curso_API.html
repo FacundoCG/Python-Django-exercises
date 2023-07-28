@@ -1,0 +1,11 @@
+{% extends "myapp/header.html" %}
+{% load static %}
+{% block title %}Curso JSON{% endblock %}
+{% block content %}
+<div class="container-fluid mt-2">
+    <p class="fw-bold">Respuesta en formato JSON:</p>
+    {% for i in respuesta %}
+        {{i}}
+    {% endfor %}
+</div>
+{% endblock %}

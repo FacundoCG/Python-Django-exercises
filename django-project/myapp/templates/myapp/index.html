@@ -1,0 +1,34 @@
+{% extends "myapp/header.html" %}
+{% load static %}
+{% block title %} Inicio{% endblock %}
+{% block content %}
+
+<h1 class="text-center fw-bold text-success mt-2">¡BIENVENIDOS!</h1>
+
+<div class="container-fluid">
+    <p class="fw-bold">Hola, yo soy {{ nombre }} y soy un {{descripcion}}.</p>
+    <hr>
+    <p>Este proyecto es parte de un curso de {{cursos.junio}} que estuve haciendo entre junio y julio del 2022.</p>
+    <p> Otros cursos que fui haciendo en distintas tecnologías fueron: </p>
+    {% for i in tecnologias %}
+    <ul>
+        <li>{{i|capfirst|cut:"_"}}</li>
+    </ul>
+    {% endfor %}
+    <hr>
+    <p> Un curso que hice fue {{juan}}
+    <p><strong class="text-primary">¿Este año he leido varios libros?</strong>
+    {% if librosLeidos > 15 %}
+        Sí, he leido exactamente {{librosLeidos}} libros y pienso seguir leyendo más.
+    {% else %}
+       No he leido demasiados libros este año. Me voy a proponer leer más.
+    {% endif %}</p>
+    <hr>
+    <p class="fw-bold">Cantidad de libros comprados en julio: {{libros|length|add:"5"}}</p>
+    <p>Un libro que me gustó mucho fue {{libros|first}}.</p>
+    <p>El valor predeterminado para un objeto sin valor es: {{sinValor|default:"N/A"}}.</p>
+</div>
+
+{% endblock %}
+
+<!--<img src="{% static 'myapp/swift.png' %}" width=50 height=50>-->

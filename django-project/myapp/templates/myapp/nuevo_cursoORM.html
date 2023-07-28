@@ -1,0 +1,11 @@
+{% extends "myapp/header.html" %}
+{% block title %} Nuevo curso ORM{% endblock %}
+{% block content %}
+<div class="container-fluid mt-4 mb-4">
+    <form action="" method="POST" class="mx-2">
+        {% csrf_token %}
+        {{formulario.as_p}}
+        <input class="btn btn-primary fw-bold" type="submit" value="Nuevo curso">
+    </form>
+</div>
+{% endblock %}
